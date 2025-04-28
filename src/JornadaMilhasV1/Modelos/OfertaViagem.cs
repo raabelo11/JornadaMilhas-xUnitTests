@@ -9,10 +9,20 @@ namespace JornadaMilhasV1.Modelos;
 
 public class OfertaViagem: Valida
 {
+    private double desconto;
+
     public int Id { get; set; }
     public Rota Rota { get; set; } 
     public Periodo Periodo { get; set; }
     public double Preco { get; set; }
+    public double Desconto
+    { 
+        get => desconto; 
+        set
+        {
+            desconto = value;
+        }
+    }
 
 
     public OfertaViagem(Rota rota, Periodo periodo, double preco)
